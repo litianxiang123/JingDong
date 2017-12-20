@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="helloworld.example.com.jingdong.acticity.ShopActivity">
+
+    <LinearLayout
+
+        android:fitsSystemWindows="true"
+        android:id="@+id/ll_nest_toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.Toolbar
+            android:fitsSystemWindows="true"
+            android:id="@+id/tool_head"
+            android:layout_height="?android:actionBarSize"
+            android:layout_width="match_parent"
+            >
+            <LinearLayout
+
+                android:id="@+id/ll_head"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <LinearLayout
+                    android:padding="5dp"
+                    android:id="@+id/ll_sao"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp">
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/back1"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:padding="5dp"
+                    android:background="@drawable/search_bg"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="30dp">
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/search_icon2"
+                        />
+                        <EditText
+                            android:id="@+id/et_name"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:layout_width="0dp"
+                        android:textSize="12sp"
+                        android:layout_height="wrap_content"
+                            android:background="@null"
+                        android:hint="都市丽人领劵满399减200"
+                        />
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/root"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:padding="5dp"
+                    android:id="@+id/ll_msg"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp">
+
+                    <ImageButton
+                        android:id="@+id/iv_msg"
+                        android:paddingTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/fenlei_buju"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="综合"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/colorAccent"
+            android:text="销量"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="价格"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/colorAccent"
+            android:text="筛选"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/shop_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
